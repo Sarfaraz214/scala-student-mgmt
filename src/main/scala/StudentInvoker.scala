@@ -5,7 +5,7 @@ object StudentInvoker {
   def main(args: Array[String]): Unit = {
     val s1 = Student(11, "Sarfaraz", 26)
     val s2 = Student(22, "Divyansh", 23)
-    val s3 = Student(22, "Rahul", 24)
+    val s3 = Student(33, "Rahul", 24)
 
     val student = new StudentServiceImpl
 
@@ -22,13 +22,13 @@ object StudentInvoker {
 
     val id_find = 11
 
-    println(s"\nRetrieving student with ID: ${id_find}...")
+    println(s"\nRetrieving student with ID: $id_find...")
     val foundStud: Student = student.getStudent(id_find)
     if(foundStud.id != 0) println(foundStud.toString) else println("No such student found!!!")
 
     val id_delete = 22
 
-    println(s"\nDeleting student with ID: ${id_delete}...")
+    println(s"\nDeleting student with ID: $id_delete...")
     val delStud = student.deleteStudent(id_delete)
     if(delStud) println("Deleted sucessfully!!!") else println("No such record found!!!")
 

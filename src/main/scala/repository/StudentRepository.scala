@@ -6,7 +6,7 @@ import model.Student
 
 import scala.collection.mutable
 
-object StudentRepository {
+class StudentRepository {
   private final val url = "jdbc:mysql://localhost:3306/demodb?useSSL=false"
   private final val driver = "com.mysql.jdbc.Driver"
   private final val username = "sarfu"
@@ -18,7 +18,7 @@ object StudentRepository {
       con = DriverManager.getConnection(url, username, password)
       con.setAutoCommit(false)
     } catch {
-      case e: Exception => e.printStackTrace
+      case e: Exception => e.printStackTrace()
     }
     con
   }
@@ -34,7 +34,7 @@ object StudentRepository {
         students += student
       }
     } catch {
-      case e: Exception => e.printStackTrace
+      case e: Exception => e.printStackTrace()
     }
     students.toList
   }
@@ -49,7 +49,7 @@ object StudentRepository {
          student = Student(rs.getInt(1), rs.getString(2), rs.getInt(3))
       }
     } catch {
-      case e: Exception => e.printStackTrace
+      case e: Exception => e.printStackTrace()
     }
     student
   }
@@ -62,9 +62,9 @@ object StudentRepository {
       stmt.setString(2, s.name)
       stmt.setInt(3, s.age)
       stmt.executeUpdate
-      conn.commit
+      conn.commit()
     } catch {
-      case e: Exception => e.printStackTrace
+      case e: Exception => e.printStackTrace()
     }
   }
 
@@ -76,9 +76,9 @@ object StudentRepository {
       stmt.setInt(2, s.age)
       stmt.setInt(3, s.id)
       stmt.executeUpdate
-      conn.commit
+      conn.commit()
     } catch {
-      case e: Exception => e.printStackTrace
+      case e: Exception => e.printStackTrace()
     }
   }
 
@@ -88,9 +88,9 @@ object StudentRepository {
       val stmt = conn.prepareStatement(query)
       stmt.setInt(1, id)
       stmt.executeUpdate
-      conn.commit
+      conn.commit()
     } catch {
-      case e: Exception => e.printStackTrace
+      case e: Exception => e.printStackTrace()
     }
   }
 
