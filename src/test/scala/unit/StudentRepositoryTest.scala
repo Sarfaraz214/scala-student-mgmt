@@ -4,7 +4,7 @@ import org.junit.{After, Before}
 import org.scalatest.junit.{AssertionsForJUnit, JUnitSuiteLike}
 import repository.StudentRepository
 
-class Test extends AssertionsForJUnit with JUnitSuiteLike {
+class StudentRepositoryTest extends AssertionsForJUnit with JUnitSuiteLike {
   private final val id = 1001
   private final val name = "Raghu"
   private final val age = 20
