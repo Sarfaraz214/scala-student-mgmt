@@ -5,9 +5,9 @@ import org.scalatest.junit.{AssertionsForJUnit, JUnitSuiteLike}
 import repository.StudentRepository
 
 class StudentRepositoryTest extends AssertionsForJUnit with JUnitSuiteLike {
-  private final val id = 1001
-  private final val name = "Raghu"
-  private final val age = 20
+  private val id = 1001
+  private val name = "Raghu"
+  private val age = 20
   object studentRepo extends StudentRepository
 
   @After

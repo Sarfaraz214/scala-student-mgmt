@@ -7,11 +7,11 @@ import model.Student
 import scala.collection.mutable
 
 class StudentRepository {
-  private final val url = "jdbc:mysql://localhost:3306/demodb?useSSL=false"
-  private final val driver = "com.mysql.jdbc.Driver"
-  private final val username = "sarfu"
-  private final val password = "P@ssword1"
-  private final val conn: Connection = {
+  private val url = "jdbc:mysql://localhost:3306/demodb?useSSL=false"
+  private val driver = "com.mysql.jdbc.Driver"
+  private val username = "sarfu"
+  private val password = "P@ssword1"
+  private val conn: Connection = {
     var con: Connection = null
     try {
       Class.forName(driver)

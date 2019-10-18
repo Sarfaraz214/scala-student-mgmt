@@ -6,9 +6,9 @@ import org.scalatest.junit.{AssertionsForJUnit, JUnitSuiteLike}
 
 class StudentServiceImplIntegrationTest extends AssertionsForJUnit with JUnitSuiteLike  {
 
-  private final val id = 1001
-  private final val name = "Raghu"
-  private final val age = 20
+  private val id = 1001
+  private val name = "Raghu"
+  private val age = 20
   object student extends StudentServiceImpl
 
   @After

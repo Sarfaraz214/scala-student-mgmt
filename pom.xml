@@ -6,13 +6,6 @@
   <name>${project.artifactId}</name>
   <description>My wonderfull scala app</description>
   <inceptionYear>2018</inceptionYear>
-  <licenses>
-    <license>
-      <name>My License</name>
-      <url>http://....</url>
-      <distribution>repo</distribution>
-    </license>
-  </licenses>
 
   <properties>
     <maven.compiler.source>1.8</maven.compiler.source>
@@ -20,40 +13,7 @@
     <encoding>UTF-8</encoding>
     <scala.version>2.12.6</scala.version>
     <scala.compat.version>2.12</scala.compat.version>
-    <spec2.version>4.2.0</spec2.version>
-    <jacoco-intg-test.path>coverage-reports/jacoco-it.exec</jacoco-intg-test.path>
-    <jacoco-unit-test.path>coverage-reports/jacoco-ut.exec</jacoco-unit-test.path>
-    <jacoco.version>0.7.7.201606060606</jacoco.version>
-    <build-helper.version>1.9.1</build-helper.version>
-    <failsafe.version>2.22.1</failsafe.version>
   </properties>
-
-  <profiles>
-    <profile>
-      <id>UnitTest</id>
-      <properties>
-        <unit.test.group>com.rms.framework.test.categories.RmsUnitTest</unit.test.group>
-        <intg.test.group />
-        <unit.skip.tests>false</unit.skip.tests>
-        <intg.skip.tests>true</intg.skip.tests>
-      </properties>
-      <activation>
-        <activeByDefault>true</activeByDefault>
-      </activation>
-    </profile>
-    <profile>
-      <id>NoTest</id>
-      <properties>
-        <unit.test.group />
-        <intg.test.group />
-        <unit.skip.tests>true</unit.skip.tests>
-        <intg.skip.tests>true</intg.skip.tests>
-      </properties>
-      <activation>
-        <activeByDefault>true</activeByDefault>
-      </activation>
-    </profile>
-  </profiles>
 
   <dependencies>
     <dependency>
@@ -81,206 +41,12 @@
       <version>3.0.5</version>
       <scope>test</scope>
     </dependency>
-<!--    <dependency>-->
-<!--      <groupId>org.specs2</groupId>-->
-<!--      <artifactId>specs2-core_${scala.compat.version}</artifactId>-->
-<!--      <version>${spec2.version}</version>-->
-<!--      <scope>test</scope>-->
-<!--    </dependency>-->
-<!--    <dependency>-->
-<!--      <groupId>org.specs2</groupId>-->
-<!--      <artifactId>specs2-junit_${scala.compat.version}</artifactId>-->
-<!--      <version>${spec2.version}</version>-->
-<!--      <scope>test</scope>-->
-<!--    </dependency>-->
+
+    <dependency>
+      <groupId>org.mockito</groupId>
+      <artifactId>mockito-core</artifactId>
+      <version>2.27.0</version>
+      <scope>test</scope>
+    </dependency>
   </dependencies>
-
-  <build>
-    <sourceDirectory>src/main/scala</sourceDirectory>
-    <testSourceDirectory>src/test/scala/unit</testSourceDirectory>
-    <plugins>
-      <plugin>
-        <!-- see http://davidb.github.com/scala-maven-plugin -->
-        <groupId>net.alchim31.maven</groupId>
-        <artifactId>scala-maven-plugin</artifactId>
-        <version>3.3.2</version>
-        <executions>
-          <execution>
-            <goals>
-              <goal>compile</goal>
-              <goal>testCompile</goal>
-            </goals>
-            <configuration>
-              <args>
-                <arg>-dependencyfile</arg>
-                <arg>${project.build.directory}/.scala_dependencies</arg>
-              </args>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-surefire-plugin</artifactId>
-        <version>2.21.0</version>
-        <configuration>
-          <!-- Tests will be run with scalatest-maven-plugin instead -->
-          <skipTests>true</skipTests>
-        </configuration>
-      </plugin>
-      <plugin>
-        <groupId>org.scalatest</groupId>
-        <artifactId>scalatest-maven-plugin</artifactId>
-        <version>2.0.0</version>
-        <configuration>
-          <reportsDirectory>${project.build.directory}/surefire-reports</reportsDirectory>
-          <junitxml>.</junitxml>
-          <filereports>TestSuiteReport.txt</filereports>
-          <!-- Comma separated list of JUnit test class names to execute -->
-          <jUnitClasses>samples.AppTest</jUnitClasses>
-        </configuration>
-        <executions>
-          <execution>
-            <id>test</id>
-            <goals>
-              <goal>test</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-
-      <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>build-helper-maven-plugin</artifactId>
-        <version>${build-helper.version}</version>
-        <executions>
-          <execution>
-            <id>add-source</id>
-            <phase>generate-sources</phase>
-            <goals>
-              <goal>add-source</goal>
-            </goals>
-            <configuration>
-              <sources>
-                <source>src/main/java</source>
-                <source>src/main/scala</source>
-              </sources>
-            </configuration>
-          </execution>
-          <execution>
-            <id>add-test-source</id>
-            <phase>generate-sources</phase>
-            <goals>
-              <goal>add-test-source</goal>
-            </goals>
-            <configuration>
-              <sources>
-                <source>src/test/java/unit</source>
-                <source>src/test/java/integration</source>
-                <source>src/test/scala/unit</source>
-                <source>src/test/scala/integration</source>
-              </sources>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
-
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-failsafe-plugin</artifactId>
-        <version>${failsafe.version}</version>
-        <executions>
-          <execution>
-            <id>integration-tests</id>
-            <goals>
-              <goal>integration-test</goal>
-              <goal>verify</goal>
-            </goals>
-            <configuration>
-              <includes>
-                <include>**/*.java</include>
-                <include>**/*.scala</include>
-              </includes>
-              <!-- Do NOT declare this variable, if IDE shows it as red, then let it be -->
-              <argLine>@{failsafeArgLine}</argLine>
-              <groups>${intg.test.group}</groups>
-              <excludedGroups>com.rms.framework.test.categories.RmsUnitTest</excludedGroups>
-              <skipITs>${intg.skip.tests}</skipITs>
-              <failIfNoTests>false</failIfNoTests>
-              <!-- new configuration needed for coverage per test -->
-              <properties>
-                <property>
-                  <name>listener</name>
-                  <value>org.sonar.java.jacoco.JUnitListener</value>
-                </property>
-              </properties>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
-
-      <!-- Jacoco plugin for sonar coverage -->
-      <plugin>
-        <groupId>org.jacoco</groupId>
-        <artifactId>jacoco-maven-plugin</artifactId>
-        <version>${jacoco.version}</version>
-        <executions>
-          <!-- Prepares a variable, jacoco.agent.ut.arg, that contains the info
-                            to be passed to the JVM hosting the code being tested. -->
-          <execution>
-            <id>pre-unit-test</id>
-            <phase>process-test-classes</phase>
-            <goals>
-              <goal>prepare-agent</goal>
-            </goals>
-            <configuration>
-              <destFile>${jacoco-unit-test.path}</destFile>
-              <propertyName>surefireArgLine</propertyName>
-              <append>true</append>
-            </configuration>
-          </execution>
-          <execution>
-            <id>post-unit-test</id>
-            <phase>test</phase>
-            <goals>
-              <goal>report</goal>
-            </goals>
-            <configuration>
-              <!-- Sets the path to the file which contains the execution data. -->
-              <dataFile>${jacoco-unit-test.path}</dataFile>
-              <!-- Sets the output directory for the code coverage report. -->
-              <outputDirectory>${project.reporting.outputDirectory}/jacoco-ut</outputDirectory>
-            </configuration>
-          </execution>
-          <!-- Prepares a variable, jacoco.agent.it.arg, that contains the info to be passed to the JVM hosting the code being tested. -->
-          <execution>
-            <id>pre-integration-test</id>
-            <phase>pre-integration-test</phase>
-            <goals>
-              <goal>prepare-agent-integration</goal>
-            </goals>
-            <configuration>
-              <destFile>${jacoco-intg-test.path}</destFile>
-              <propertyName>failsafeArgLine</propertyName>
-              <append>true</append>
-            </configuration>
-          </execution>
-          <execution>
-            <id>post-integration-test</id>
-            <phase>integration-test</phase>
-            <goals>
-              <goal>report</goal>
-            </goals>
-            <configuration>
-              <!-- Sets the path to the file which contains the execution data. -->
-              <dataFile>${jacoco-intg-test.path}</dataFile>
-              <!-- Sets the output directory for the code coverage report. -->
-              <outputDirectory>${project.reporting.outputDirectory}/jacoco-it</outputDirectory>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
-
-    </plugins>
-  </build>
 </project>
