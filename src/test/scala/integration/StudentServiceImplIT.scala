@@ -4,7 +4,7 @@ import org.junit
 import org.junit.{After, Before}
 import org.scalatest.junit.{AssertionsForJUnit, JUnitSuiteLike}
 
-class StudentServiceImplIntegrationTest extends AssertionsForJUnit with JUnitSuiteLike  {
+class StudentServiceImplIT extends AssertionsForJUnit with JUnitSuiteLike  {
 
   private val id = 1001
   private val name = "Raghu"

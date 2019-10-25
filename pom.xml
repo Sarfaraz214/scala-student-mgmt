@@ -5,7 +5,7 @@
   <version>0.1</version>
   <name>${project.artifactId}</name>
   <description>My wonderfull scala app</description>
-  <inceptionYear>2018</inceptionYear>
+  <inceptionYear>2019</inceptionYear>
 
   <properties>
     <maven.compiler.source>1.8</maven.compiler.source>
@@ -13,6 +13,7 @@
     <encoding>UTF-8</encoding>
     <scala.version>2.12.6</scala.version>
     <scala.compat.version>2.12</scala.compat.version>
+    <failsafe.version>2.22.1</failsafe.version>
   </properties>
 
   <dependencies>
@@ -35,6 +36,7 @@
       <version>4.12</version>
       <scope>test</scope>
     </dependency>
+
     <dependency>
       <groupId>org.scalatest</groupId>
       <artifactId>scalatest_${scala.compat.version}</artifactId>
@@ -49,4 +51,58 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+
+  <build>
+    <sourceDirectory>src/main/scala</sourceDirectory>
+    <testSourceDirectory>src/test/scala/</testSourceDirectory>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>2.21.0</version>
+      </plugin>
+
+      <plugin>
+        <groupId>org.scalatest</groupId>
+        <artifactId>scalatest-maven-plugin</artifactId>
+        <version>2.0.0</version>
+        <configuration>
+          <reportsDirectory>${project.build.directory}/surefire-reports</reportsDirectory>
+          <junitxml>.</junitxml>
+          <filereports>TestSuiteReport.txt</filereports>
+          <!-- Comma separated list of JUnit test class names to execute -->
+          <jUnitClasses>StudentRepositoryTest</jUnitClasses>
+        </configuration>
+        <executions>
+          <execution>
+            <id>test</id>
+            <goals>
+              <goal>test</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-failsafe-plugin</artifactId>
+        <version>${failsafe.version}</version>
+        <configuration>
+          <includes>
+            <include>**/*IT.scala</include>
+          </includes>
+        </configuration>
+        <executions>
+          <execution>
+            <id>integration-tests</id>
+            <phase>integration-test</phase>
+            <goals>
+              <goal>integration-test</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+
+    </plugins>
+  </build>
 </project>

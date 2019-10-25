@@ -2,10 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f77545b5-b89f-4be6-9a6f-54233f00efd4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scala-project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/scala-project.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/scala/integration/StudentServiceImplIntegrationTest.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/integration/StudentServiceImplIT.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/scala/samples/junit.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/scala/samples/scalatest.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/scala/samples/specs.scala" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/scala/unit/StudentServiceImplTest.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/unit/StudentServiceImplTest.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Test$$anon$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/scala-project.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/META-INF/scala-project.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/StudentServiceImplIntegrationTest$student$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/StudentServiceImplIntegrationTest.class" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -56,7 +65,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="ScalaTest.StudentServiceImplTest">
+  <component name="RunManager" selected="JUnit.StudentRepositoryTest">
     <configuration name="StudentRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="scala-project" />
       <option name="PACKAGE_NAME" value="" />
@@ -66,10 +75,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StudentServiceImplIntegrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="StudentServiceImplIT" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="scala-project" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="StudentServiceImplIntegrationTest" />
+      <option name="MAIN_CLASS_NAME" value="StudentServiceImplIT" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -137,11 +146,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.StudentRepositoryTest" />
+        <item itemvalue="ScalaTest.StudentServiceImplTest" />
         <item itemvalue="ScalaTest.StudentServiceImplTest" />
         <item itemvalue="ScalaTest.StudentServiceImplTest" />
         <item itemvalue="ScalaTest.Test" />
-        <item itemvalue="ScalaTest.Test.StudentServiceImpl should should return student" />
-        <item itemvalue="JUnit.StudentServiceImplIntegrationTest" />
       </list>
     </recent_temporary>
   </component>

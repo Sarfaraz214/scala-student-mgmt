@@ -1,6 +1,6 @@
 import org.scalatest.{Matchers, WordSpecLike}
 import org.scalatest.mockito.MockitoSugar
-import org.mockito.Mockito.{when, verify}
+import org.mockito.Mockito.{verify, when}
 import repository.StudentRepository
 import com.sarfaraz.knoldus.StudentServiceImpl
 import model.Student
