@@ -1,9 +1,22 @@
-[36mRun starting. Expected test count is: 2[0m
-[32mJUnitWrapperSuite:[0m
+[36mDiscovery starting.[0m
+[36mDiscovery completed in 744 milliseconds.[0m
+[36mRun starting. Expected test count is: 9[0m
+[32mStudentServiceImplTest:[0m
+[32mGetStudents[0m
+[32m- should should return all student[0m
+[32mGetStudent[0m
+[32m- should return one student[0m
+[32mStudentRepositoryTest:[0m
 [32m- getStudent[0m
 [32m- getStudents[0m
-[36mRun completed in 794 milliseconds.[0m
-[36mTotal number of tests run: 2[0m
-[36mSuites: completed 1, aborted 0[0m
-[36mTests: succeeded 2, failed 0, canceled 0, ignored 0, pending 0[0m
+[32mStudentServiceImplIT:[0m
+[32m- deleteStudent[0m
+[32m- getStudent[0m
+[32m- getStudents[0m
+[32m- createStudent[0m
+[32m- updateStudent[0m
+[36mRun completed in 2 seconds, 48 milliseconds.[0m
+[36mTotal number of tests run: 9[0m
+[36mSuites: completed 4, aborted 0[0m
+[36mTests: succeeded 9, failed 0, canceled 0, ignored 0, pending 0[0m
 [32mAll tests passed.[0m

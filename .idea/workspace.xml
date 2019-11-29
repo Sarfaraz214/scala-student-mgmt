@@ -2,19 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f77545b5-b89f-4be6-9a6f-54233f00efd4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scala-project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/scala-project.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/scala/integration/StudentServiceImplIntegrationTest.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/integration/StudentServiceImplIT.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/scala/samples/junit.scala" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/scala/samples/scalatest.scala" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/scala/samples/specs.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/scala/integration/StudentServiceImplIT.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/integration/StudentServiceImplIT.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/scala/unit/StudentServiceImplTest.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/unit/StudentServiceImplTest.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/scala-project.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/META-INF/scala-project.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/StudentServiceImplIntegrationTest$student$.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/StudentServiceImplIntegrationTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes.239231809.timestamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-project-0.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-project-0.1.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/StudentRepositoryTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/StudentRepositoryTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-StudentRepositoryTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-StudentRepositoryTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-org.scalatest.junit.JUnitWrapperSuite.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-org.scalatest.junit.JUnitWrapperSuite.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TestSuiteReport.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TestSuiteReport.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes.1502042970.timestamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes.1748686617.timestamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes.468535974.timestamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/StudentServiceImplIT$student$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/StudentServiceImplIT$student$.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/StudentServiceImplIT.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/StudentServiceImplIT.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/StudentServiceImplTest$$anon$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/StudentServiceImplTest$$anon$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/StudentServiceImplTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/StudentServiceImplTest.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,6 +40,13 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
@@ -147,10 +159,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.StudentRepositoryTest" />
+        <item itemvalue="JUnit.StudentServiceImplIT" />
         <item itemvalue="ScalaTest.StudentServiceImplTest" />
         <item itemvalue="ScalaTest.StudentServiceImplTest" />
         <item itemvalue="ScalaTest.StudentServiceImplTest" />
-        <item itemvalue="ScalaTest.Test" />
       </list>
     </recent_temporary>
   </component>

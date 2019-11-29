@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuite 
-errors="0" failures="0" hostname="knoldus-Vostro-3559" name="org.scalatest.junit.JUnitWrapperSuite" tests="0" time="0.856" timestamp="2019-10-29T13:07:06">
+errors="0" failures="0" hostname="knoldus-Vostro-3559" name="org.scalatest.tools.DiscoverySuite" tests="0" time="0.089" timestamp="2019-10-29T13:16:53">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property 
@@ -59,7 +59,7 @@ errors="0" failures="0" hostname="knoldus-Vostro-3559" name="org.scalatest.junit
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="/usr/lib/jvm/java-8-openjdk-amd64/jre"/>
     <property 
-    name="sun.java.command" value="org.scalatest.tools.Runner -R /home/knoldus/my-project/scala-project/target/classes /home/knoldus/my-project/scala-project/target/test-classes -l Integration-Test -s StudentServiceImplTest -j StudentRepositoryTest -j StudentServiceImplIT -o -f /home/knoldus/my-project/scala-project/target/surefire-reports/TestSuiteReport.txt -u /home/knoldus/my-project/scala-project/target/surefire-reports/.">
+    name="sun.java.command" value="org.scalatest.tools.Runner -R /home/knoldus/my-project/scala-project/target/classes /home/knoldus/my-project/scala-project/target/test-classes -n Integration-Test -o -f /home/knoldus/my-project/scala-project/target/surefire-reports/TestSuiteReport.txt -u /home/knoldus/my-project/scala-project/target/surefire-reports/.">
 </property>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="en"/>

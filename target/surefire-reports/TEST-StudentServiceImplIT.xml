@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuite 
-errors="0" failures="0" hostname="knoldus-Vostro-3559" name="org.scalatest.junit.JUnitWrapperSuite" tests="0" time="0.856" timestamp="2019-10-29T13:07:06">
+errors="0" failures="0" hostname="knoldus-Vostro-3559" name="StudentServiceImplIT" tests="5" time="0.808" timestamp="2019-10-29T13:32:57">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property 
@@ -59,7 +59,7 @@ errors="0" failures="0" hostname="knoldus-Vostro-3559" name="org.scalatest.junit
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="/usr/lib/jvm/java-8-openjdk-amd64/jre"/>
     <property 
-    name="sun.java.command" value="org.scalatest.tools.Runner -R /home/knoldus/my-project/scala-project/target/classes /home/knoldus/my-project/scala-project/target/test-classes -l Integration-Test -s StudentServiceImplTest -j StudentRepositoryTest -j StudentServiceImplIT -o -f /home/knoldus/my-project/scala-project/target/surefire-reports/TestSuiteReport.txt -u /home/knoldus/my-project/scala-project/target/surefire-reports/.">
+    name="sun.java.command" value="org.scalatest.tools.Runner -R /home/knoldus/my-project/scala-project/target/classes /home/knoldus/my-project/scala-project/target/test-classes -l Integration-Test -o -f /home/knoldus/my-project/scala-project/target/surefire-reports/TestSuiteReport.txt -u /home/knoldus/my-project/scala-project/target/surefire-reports/.">
 </property>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="en"/>
@@ -82,6 +82,19 @@ errors="0" failures="0" hostname="knoldus-Vostro-3559" name="org.scalatest.junit
     <property name="sun.desktop" value="gnome"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
+  <testcase 
+  name="deleteStudent" classname="StudentServiceImplIT" time="0.145">
+</testcase>
+  <testcase name="getStudent" classname="StudentServiceImplIT" time="0.12">
+  </testcase>
+  <testcase name="getStudents" classname="StudentServiceImplIT" time="0.121">
+  </testcase>
+  <testcase 
+  name="createStudent" classname="StudentServiceImplIT" time="0.231">
+</testcase>
+  <testcase 
+  name="updateStudent" classname="StudentServiceImplIT" time="0.179">
+</testcase>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

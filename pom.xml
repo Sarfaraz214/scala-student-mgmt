@@ -56,11 +56,11 @@
     <sourceDirectory>src/main/scala</sourceDirectory>
     <testSourceDirectory>src/test/scala/</testSourceDirectory>
     <plugins>
-      <plugin>
+      <!--<plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
         <version>2.21.0</version>
-      </plugin>
+      </plugin>-->
 
       <plugin>
         <groupId>org.scalatest</groupId>
@@ -71,37 +71,57 @@
           <junitxml>.</junitxml>
           <filereports>TestSuiteReport.txt</filereports>
           <!-- Comma separated list of JUnit test class names to execute -->
-          <jUnitClasses>StudentRepositoryTest</jUnitClasses>
+<!--          <jUnitClasses>StudentRepositoryTest,StudentServiceImplIT</jUnitClasses>-->
+<!--          <suites>StudentServiceImplTest</suites>-->
         </configuration>
+
         <executions>
           <execution>
             <id>test</id>
             <goals>
               <goal>test</goal>
             </goals>
+            <configuration>
+              <parallel>false</parallel>
+              <tagsToExclude>Integration-Test
+              </tagsToExclude>
+            </configuration>
           </execution>
+
+          <execution>
+            <id>integration-test</id>
+            <phase>integration-test</phase>
+            <goals>
+              <goal>test</goal>
+            </goals>
+            <configuration>
+              <parallel>false</parallel>
+              <tagsToInclude>Integration-Test</tagsToInclude>
+            </configuration>
+          </execution>
+
         </executions>
       </plugin>
 
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-failsafe-plugin</artifactId>
-        <version>${failsafe.version}</version>
-        <configuration>
-          <includes>
-            <include>**/*IT.scala</include>
-          </includes>
-        </configuration>
-        <executions>
-          <execution>
-            <id>integration-tests</id>
-            <phase>integration-test</phase>
-            <goals>
-              <goal>integration-test</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
+<!--      <plugin>-->
+<!--        <groupId>org.apache.maven.plugins</groupId>-->
+<!--        <artifactId>maven-failsafe-plugin</artifactId>-->
+<!--        <version>${failsafe.version}</version>-->
+<!--        <configuration>-->
+<!--          <includes>-->
+<!--            <include>**/*IT.scala</include>-->
+<!--          </includes>-->
+<!--        </configuration>-->
+<!--        <executions>-->
+<!--          <execution>-->
+<!--            <id>integration-tests</id>-->
+<!--            <phase>integration-test</phase>-->
+<!--            <goals>-->
+<!--              <goal>integration-test</goal>-->
+<!--            </goals>-->
+<!--          </execution>-->
+<!--        </executions>-->
+<!--      </plugin>-->
 
     </plugins>
   </build>

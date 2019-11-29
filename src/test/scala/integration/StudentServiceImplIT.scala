@@ -2,12 +2,13 @@ import com.sarfaraz.knoldus.StudentServiceImpl
 import model.Student
 import org.junit
 import org.junit.{After, Before}
+import org.scalatest.Tag
 import org.scalatest.junit.{AssertionsForJUnit, JUnitSuiteLike}
 
-class StudentServiceImplIT extends AssertionsForJUnit with JUnitSuiteLike  {
+class StudentServiceImplIT extends Tag("Integration-Test") with AssertionsForJUnit with JUnitSuiteLike  {
 
   private val id = 1001
-  private val name = "Raghu"
+  private val sName = "Raghu"
   private val age = 20
   object student extends StudentServiceImpl
 
@@ -19,7 +20,7 @@ class StudentServiceImplIT extends AssertionsForJUnit with JUnitSuiteLike  {
 
   @Before
   def before(): Unit = {
-    student.createStudent(Student(id, name, age))
+    student.createStudent(Student(id, sName, age))
   }
 
   @junit.Test
@@ -36,13 +37,13 @@ class StudentServiceImplIT extends AssertionsForJUnit with JUnitSuiteLike  {
 
   @junit.Test
   def createStudent(): Unit = {
-    val stud = student.createStudent(Student(id + 1, name, age))
+    val stud = student.createStudent(Student(id + 1, sName, age))
     assert(stud.id != 0, "Student ID should be greater then 0.")
   }
 
   @junit.Test
   def updateStudent(): Unit = {
-    val stud = student.updateStudent(Student(id, "Testing", age))
+    val stud = student.updateStudent(Student(id, "Testing1", age))
     println(stud.name)
     assert(stud.id != 0, "Student ID should be greater then 0.")
   }
